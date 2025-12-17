@@ -19,6 +19,7 @@ public class TriangleAreaApp extends JFrame {
         resultField.setEditable(false);
 
         JButton calculateButton = new JButton("Рассчитать");
+        JButton clearButton = new JButton("Очистить");
 
         calculateButton.addActionListener(e -> {
             try {
@@ -43,6 +44,13 @@ public class TriangleAreaApp extends JFrame {
             }
         });
 
+        clearButton.addActionListener(e -> {
+            aField.setText("");
+            bField.setText("");
+            cField.setText("");
+            resultField.setText("");
+        });
+
         add(new JLabel("Сторона A:"));
         add(aField);
         add(new JLabel("Сторона B:"));
@@ -50,6 +58,7 @@ public class TriangleAreaApp extends JFrame {
         add(new JLabel("Сторона C:"));
         add(cField);
         add(calculateButton);
+        add(clearButton);
         add(resultField);
     }
 
@@ -58,4 +67,3 @@ public class TriangleAreaApp extends JFrame {
                 new TriangleAreaApp().setVisible(true));
     }
 }
-
