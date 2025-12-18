@@ -1,4 +1,4 @@
-package main.java.by.hodorenko.triangleareaapp;
+package by.hodorenko.triangleareaapp;
 
 import javax.swing.*;
 import java.awt.*;
